@@ -1,10 +1,9 @@
 package com.example.app;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.time.Duration;
 
 import org.junit.jupiter.api.AfterAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -24,7 +23,7 @@ public class LoginTest {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
-        webDriver.get("http://127.0.0.1:5500/src/webUI/login.html");
+        webDriver.get("http://127.0.0.1:5500/JUnit-Testing/my-app/src/webUI/Login.html");
     }
 
     @Test
@@ -38,21 +37,21 @@ public class LoginTest {
         try {
             Thread.sleep(2000);
             
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             
         }
         username.sendKeys("sahilbajkamble@gmail.com");
         try {
             Thread.sleep(2000);
             
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             
         }
         password.sendKeys("sahilkamble@11");
         try {
             Thread.sleep(2000);
             
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             
         }
 
@@ -71,11 +70,10 @@ public class LoginTest {
             try {
             Thread.sleep(2000);
             
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             
         }
         }
-
         assertTrue(message.getAttribute("value").contains("Login Sucessful"));
     }
 
