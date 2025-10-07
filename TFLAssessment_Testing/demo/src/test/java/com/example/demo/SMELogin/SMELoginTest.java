@@ -57,10 +57,10 @@ public class SMELoginTest {
 		// startTest.click();		
 	}
 
-	// @AfterClass
-	// void teardown(){
-	// 	driver.quit();
-	// }
+	@AfterClass
+	void teardown(){
+		driver.quit();
+	}
 
     
 }
