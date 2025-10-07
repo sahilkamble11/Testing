@@ -3,10 +3,12 @@ package com.example.demo.SMELogin;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.testng.Assert.assertTrue;
 import org.testng.annotations.AfterClass;
@@ -43,24 +45,79 @@ public class SMELoginTest {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
-		wait.until(ExpectedConditions.urlContains("/Student/student.html"));
+		wait.until(ExpectedConditions.urlContains("/SME/sme.html"));
 
-		// WebElement getAll=driver.findElement(By.id("TestList"));
-		// getAll.click();
-		// assertTrue(driver.getCurrentUrl().contains("/Student/student.html#"),"Unable to open next page");
+		WebElement create=driver.findElement(By.id("createTestLink"));
+		create.click();
+		assertTrue(driver.getCurrentUrl().contains("/SME/sme.html"),"Unable to open next page");
 
-		// WebElement detailsButton = driver.findElement(By.className("detailsBtn"));
-        // detailsButton.click();
-		// wait.until(ExpectedConditions.urlContains("/Student/student.html#"));
+		 WebElement testName = driver.findElement(By.id("testName"));
+         testName.sendKeys("Software Engineering");
 
-		// WebElement startTest = driver.findElement(By.className("startBtn"));
-		// startTest.click();		
+         WebElement duration = driver.findElement(By.id("duration"));
+         duration.sendKeys("00:30:00");
+
+         WebElement Subject = driver.findElement(By.id("subjectSelect"));
+         Select subject = new Select(Subject);
+         subject.selectByVisibleText("ADVJAVA");
+
+         try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
+
+         WebElement SME = driver.findElement(By.id("smeSelect"));
+         Select sme = new Select(SME);
+         sme.selectByVisibleText("sahil kamble");
+         try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.getElementById('scheduledDate').value = '2025-10-07T20:00';");
+
+        //  WebElement date = driver.findElement(By.id("scheduledDate"));
+        //  date.sendKeys("2025-10-07T12:35");
+         try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
+
+         WebElement passingLevel = driver.findElement(By.id("passingLevel"));
+         passingLevel.sendKeys("5");
+         try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
+
+         WebElement que1 = driver.findElement(By.cssSelector("input[value='6']"));
+         que1.click();
+
+         WebElement que2 = driver.findElement(By.cssSelector("input[value='7']"));
+         que2.click();
+
+         WebElement que3 = driver.findElement(By.cssSelector("input[value='8']"));
+         que3.click();
+
+         WebElement que4 = driver.findElement(By.cssSelector("input[value='9']"));
+         que4.click();
+
+         WebElement que5 = driver.findElement(By.cssSelector("input[value='10']"));
+         que5.click();
+
+         WebElement submitBtn = driver.findElement(By.id("submitBtn"));
+         submitBtn.click();	
 	}
 
-	@AfterClass
-	void teardown(){
-		driver.quit();
-	}
+	// @AfterClass
+	// void teardown(){
+	// 	driver.quit();
+	// }
 
     
 }
