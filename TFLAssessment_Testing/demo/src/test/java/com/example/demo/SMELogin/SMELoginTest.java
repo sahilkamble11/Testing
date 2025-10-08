@@ -29,7 +29,7 @@ public class SMELoginTest {
 		driver.get("http://127.0.0.1:5500/Home.html");
 	}
 
-	@Test
+	@Test(priority = 1)
 	void login(){
 		
 		WebElement btn=driver.findElement(By.linkText("Login"));

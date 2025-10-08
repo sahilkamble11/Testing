@@ -29,7 +29,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		driver.get("http://127.0.0.1:5500/Home.html");
 	}
 
-	@Test
+	@Test(priority = 3)
 	void login(){
 		
 		WebElement btn=driver.findElement(By.linkText("Login"));
@@ -50,7 +50,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		getAll.click();
 		assertTrue(driver.getCurrentUrl().contains("/Student/student.html#"),"Unable to open next page");
 
-		WebElement detailsButton = driver.findElement(By.className("detailsBtn"));
+		WebElement detailsButton = driver.findElement(By.xpath("//button[contains(@data-test, '\"id\":13')]"));
         detailsButton.click();
 		wait.until(ExpectedConditions.urlContains("/Student/student.html#"));
 

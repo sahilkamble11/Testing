@@ -30,7 +30,7 @@ public class AdminLoginTest {
 		driver.get("http://127.0.0.1:5500/Home.html");
 	}
 
-	@Test
+	@Test(priority = 2)
 	void login(){
 		
 		WebElement btn=driver.findElement(By.linkText("Login"));
@@ -68,8 +68,9 @@ public class AdminLoginTest {
          } catch (Exception e) {
             
          }
-        WebElement updateTest=driver.findElement(By.xpath("//button[@onclick()='updateTest(12)']"));
-		updateTest.click();
+       WebElement updateTest = driver.findElement(By.xpath("//button[@onclick='updateTest(23)']"));
+       updateTest.click();
+
 
          try {
             Thread.sleep(2000); 
