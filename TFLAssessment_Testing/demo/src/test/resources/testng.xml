@@ -1,9 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TFLAssessmentTestSuiteSuite" verbose="1">
+<suite name="TFLAssessmentTestSuiteSuite" verbose="1" parallel="false" preserve-order="true">
 
     <test name="SME Tests">
         <classes>
             <class name="com.example.demo.SMELogin.SMELoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Admin Tests">
+        <classes>
+            <class name="com.example.demo.AdminLogin.AdminLoginTest"/>
         </classes>
     </test>
 

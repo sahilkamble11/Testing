@@ -1,18 +1,17 @@
 package com.example.demo.StudentLogin;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import static org.testng.Assert.assertTrue;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-
-import static org.testng.Assert.assertTrue;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -56,7 +55,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		wait.until(ExpectedConditions.urlContains("/Student/student.html#"));
 
 		WebElement startTest = driver.findElement(By.className("startBtn"));
-		startTest.click();		
+		startTest.click();	
+		 try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
 	}
 
 	@AfterClass

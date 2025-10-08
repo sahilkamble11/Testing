@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.testng.Assert.assertTrue;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -109,9 +108,30 @@ public class SMELoginTest {
 
          WebElement que5 = driver.findElement(By.cssSelector("input[value='10']"));
          que5.click();
+          try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
 
          WebElement submitBtn = driver.findElement(By.id("submitBtn"));
          submitBtn.click();	
+          try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
+
+         
+         WebElement confirmBtn = driver.findElement(By.id("confirmBtn"));
+         confirmBtn.click();
+         	
+          try {
+            Thread.sleep(2000); 
+         } catch (Exception e) {
+            
+         }
+
 	}
 
 	// @AfterClass
