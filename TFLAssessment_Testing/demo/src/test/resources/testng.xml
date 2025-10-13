@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TFLAssessmentTestSuiteSuite" verbose="1" parallel="false" preserve-order="true">
+<suite name="StatusCodePlaygroundSuite" verbose="1" parallel="false" preserve-order="true">
 
-    <test name="SME Tests">
+    <test name="Status Step Def">
         <classes>
             <class name="com.example.demo.SMELogin.SMELoginTest"/>
         </classes>
