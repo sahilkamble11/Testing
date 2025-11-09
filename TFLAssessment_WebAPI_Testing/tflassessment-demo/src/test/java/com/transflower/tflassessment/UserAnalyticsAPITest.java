@@ -1,11 +1,9 @@
 package com.transflower.tflassessment;
-import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.equalTo;
-
-import static io.restassured.RestAssured.given;
-
+import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
 
 
 public class UserAnalyticsAPITest {
@@ -21,5 +19,28 @@ public class UserAnalyticsAPITest {
         .body(equalTo("73"))
         .statusCode(200);
     }
+
+    //   @Test
+    // public void GetTotalOnlineSecondsAsync(){
+    //     given()
+    //     .when()
+    //     .get("/api/UserAnalytics/ActiveUsercount")
+    //     .then()
+    //     .body(equalTo("No second found."))
+    //     .statusCode(404);
+
+    // }
+
+    //  @Test
+    // public void GetTotalOnlineSecondsAsync(){
+    //     given()
+    //     .when()
+    //     .get("/api/UserAnalytics/allusercount")
+    //     .then()
+    //     .body(equalTo(""))
+    //     .statusCode(200);
+
+    // }
     
+   
 }
