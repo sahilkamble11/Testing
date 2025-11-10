@@ -20,16 +20,16 @@ public class UserAnalyticsAPITest {
         .statusCode(200);
     }
 
-    //   @Test
-    // public void GetTotalOnlineSecondsAsync(){
-    //     given()
-    //     .when()
-    //     .get("/api/UserAnalytics/ActiveUsercount")
-    //     .then()
-    //     .body(equalTo("No second found."))
-    //     .statusCode(404);
+      @Test
+    public void GetTotalOnlineSecondsAsync(){
+        given()
+        .when()
+        .get("/api/UserAnalytics/ActiveUsercount")
+        .then()
+        .body(equalTo("No second found."))
+        .statusCode(404);
 
-    // }
+    }
 
     //  @Test
     // public void GetTotalOnlineSecondsAsync(){
