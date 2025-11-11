@@ -31,16 +31,16 @@ public class UserAnalyticsAPITest {
 
     }
 
-    //  @Test
-    // public void GetTotalOnlineSecondsAsync(){
-    //     given()
-    //     .when()
-    //     .get("/api/UserAnalytics/allusercount")
-    //     .then()
-    //     .body(equalTo(""))
-    //     .statusCode(200);
+     @Test
+    public void GetTotalOnlineSecondsAsync(){
+        given()
+        .when()
+        .get("/api/UserAnalytics/allusercount")
+        .then()
+        .body(equalTo(""))
+        .statusCode(200);
 
-    // }
+    }
     
    
 }
