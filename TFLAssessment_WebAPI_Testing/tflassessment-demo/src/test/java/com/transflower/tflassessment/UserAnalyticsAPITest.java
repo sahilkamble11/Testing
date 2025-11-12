@@ -20,8 +20,8 @@ public class UserAnalyticsAPITest {
         .statusCode(200);
     }
 
-      @Test
-    public void GetTotalOnlineSecondsAsync(){
+    @Test
+    public void GetActiveUsersCountAsync(){
         given()
         .when()
         .get("/api/UserAnalytics/ActiveUsercount")
@@ -31,8 +31,8 @@ public class UserAnalyticsAPITest {
 
     }
 
-     @Test
-    public void GetTotalOnlineSecondsAsync(){
+    @Test
+    public void GetUserCount(){
         given()
         .when()
         .get("/api/UserAnalytics/allusercount")
@@ -41,6 +41,4 @@ public class UserAnalyticsAPITest {
         .statusCode(200);
 
     }
-    
-   
 }
