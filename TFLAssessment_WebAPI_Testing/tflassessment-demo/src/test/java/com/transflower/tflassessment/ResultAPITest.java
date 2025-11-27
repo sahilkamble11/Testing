@@ -1,5 +1,6 @@
 package com.transflower.tflassessment;
 
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.greaterThan;
 import org.testng.annotations.Test;
 
@@ -19,5 +20,28 @@ public class ResultAPITest {
         .then()
          .statusCode(200)
          .body("size()",greaterThan(0));
+    }
+
+    @Test
+    public void SetCandidateTestStartTime(){
+        String requestBody="""
+                {
+                "hour": 10,
+                "minutes": 30,
+                "seconds": 0,
+                "day": 27,
+                "month": 11,
+                "year": 2025
+                }
+                """;
+        given()
+         .headers("Content-Type","application/json")
+         .body(requestBody)
+         .when()
+          .post("/api/Result/setstarttime/1/tests/1")
+          .then()
+          .statusCode(200)
+          .body(equalTo("true"));
+          
     }
 }
