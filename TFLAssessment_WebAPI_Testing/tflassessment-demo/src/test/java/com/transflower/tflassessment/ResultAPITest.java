@@ -89,16 +89,29 @@ public class ResultAPITest {
     //      .body("size()",greaterThan(0));
     // }
 
-    @Test
-    public void GetAppearedCandidates()
+    // @Test
+    // public void GetAppearedCandidates()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/candidates/tests/1")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
+
+     @Test
+    public void GetPassedCandidate()
     {
         given()
         .when()
-         .get("/api/Result/candidates/tests/1")
+         .get("/api/Result/passedcandidates/tests/1")
         .then()
          .statusCode(200)
          .body("size()",greaterThan(0));
     }
+
+
 
 
 
