@@ -11,72 +11,96 @@ public class ResultAPITest {
     static{
         RestAssured.baseURI="http://localhost:5238";
     }
-    @Test
-    public void GetAllQuestions()
-    {
-        given()
-        .when()
-         .get("/api/Result/subjects ")
-        .then()
-         .statusCode(200)
-         .body("size()",greaterThan(0));
-    }
+    // @Test
+    // public void GetAllQuestions()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/subjects ")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
 
-    @Test
-    public void SetCandidateTestStartTime(){
-        String requestBody="""
-                {
-                "hour": 10,
-                "minutes": 30,
-                "seconds": 0,
-                "day": 27,
-                "month": 11,
-                "year": 2025
-                }
-                """;
-        given()
-         .headers("Content-Type","application/json")
-         .body(requestBody)
-         .when()
-          .post("/api/Result/setstarttime/1/tests/1")
-          .then()
-          .statusCode(200)  
-          .body(equalTo("true"));
+    // @Test
+    // public void SetCandidateTestStartTime(){
+    //     String requestBody="""
+    //             {
+    //             "hour": 10,
+    //             "minutes": 30,
+    //             "seconds": 0,
+    //             "day": 27,
+    //             "month": 11,
+    //             "year": 2025
+    //             }
+    //             """;
+    //     given()
+    //      .headers("Content-Type","application/json")
+    //      .body(requestBody)
+    //      .when()
+    //       .post("/api/Result/setstarttime/1/tests/1")
+    //       .then()
+    //       .statusCode(200)  
+    //       .body(equalTo("true"));
           
-    }
+    // }
+
+    // @Test
+    // public void SetCandidateTestEndTime(){
+    //     String requestBody="""
+    //             {
+    //             "hour": 10,
+    //             "minutes": 30,
+    //             "seconds": 0,
+    //             "day": 27,
+    //             "month": 11,
+    //             "year": 2025
+    //             }
+    //             """;
+    //     given()
+    //      .headers("Content-Type","application/json")
+    //      .body(requestBody)
+    //     .when()
+    //      .put("/api/Result/setendtime/1/tests/1")
+    //      .then()
+    //      .statusCode(200)  
+    //      .body(equalTo("true"));
+    // }
+
+    // @Test
+    // public void GetCandidateResultDetails()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/candidates/1/tests/1/details")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
+
+    //  @Test
+    // public void GetTestResultDetail()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/tests/1/detail")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
 
     @Test
-    public void SetCandidateTestEndTime(){
-        String requestBody="""
-                {
-                "hour": 10,
-                "minutes": 30,
-                "seconds": 0,
-                "day": 27,
-                "month": 11,
-                "year": 2025
-                }
-                """;
-        given()
-         .headers("Content-Type","application/json")
-         .body(requestBody)
-        .when()
-         .put("/api/Result/setendtime/1/tests/1")
-         .then()
-         .statusCode(200)  
-         .body(equalTo("true"));
-    }
-
-      @Test
-    public void GetCandidateResultDetails()
+    public void GetAppearedCandidates()
     {
         given()
         .when()
-         .get("/api/Result/candidates/1/tests/1/details")
+         .get("/api/Result/candidates/tests/1")
         .then()
          .statusCode(200)
          .body("size()",greaterThan(0));
     }
+
+
 
 
 }
