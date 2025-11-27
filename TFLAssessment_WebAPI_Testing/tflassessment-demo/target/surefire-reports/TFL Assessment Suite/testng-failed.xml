@@ -5,7 +5,7 @@
     <classes>
       <class name="com.transflower.tflassessment.ResultAPITest">
         <methods>
-          <include name="GetFailedCandidate"/>
+          <include name="GetCandidateScore"/>
         </methods>
       </class> <!-- com.transflower.tflassessment.ResultAPITest -->
     </classes>
