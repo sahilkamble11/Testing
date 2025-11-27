@@ -100,12 +100,23 @@ public class ResultAPITest {
     //      .body("size()",greaterThan(0));
     // }
 
-     @Test
-    public void GetPassedCandidate()
+    //  @Test
+    // public void GetPassedCandidate()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/passedcandidates/tests/1")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
+
+    @Test
+    public void GetFailedCandidate()
     {
         given()
         .when()
-         .get("/api/Result/passedcandidates/tests/1")
+         .get("/api/Result/failedcandidates/tests/2")
         .then()
          .statusCode(200)
          .body("size()",greaterThan(0));

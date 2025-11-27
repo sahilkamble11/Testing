@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TFL Assessment Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="API Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.transflower.tflassessment.ResultAPITest">
+        <methods>
+          <include name="GetFailedCandidate"/>
+        </methods>
+      </class> <!-- com.transflower.tflassessment.ResultAPITest -->
+    </classes>
+  </test> <!-- API Tests(failed) -->
+</suite> <!-- Failed suite [TFL Assessment Suite] -->
