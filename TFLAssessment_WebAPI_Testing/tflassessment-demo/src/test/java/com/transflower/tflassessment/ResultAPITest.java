@@ -40,8 +40,30 @@ public class ResultAPITest {
          .when()
           .post("/api/Result/setstarttime/1/tests/1")
           .then()
-          .statusCode(200)
+          .statusCode(200)  
           .body(equalTo("true"));
           
+    }
+
+    @Test
+    public void SetCandidateTestEndTime(){
+        String requestBody="""
+                {
+                "hour": 10,
+                "minutes": 30,
+                "seconds": 0,
+                "day": 27,
+                "month": 11,
+                "year": 2025
+                }
+                """;
+        given()
+         .headers("Content-Type","application/json")
+         .body(requestBody)
+        .when()
+         .put("/api/Result/setendtime/1/tests/1")
+         .then()
+         .statusCode(200)  
+         .body(equalTo("true"));
     }
 }
