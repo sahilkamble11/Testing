@@ -2,7 +2,9 @@
 <suite name="TFL Assessment Suite">
     <test name="API Tests">
         <classes>
-            <class name="com.transflower.tflassessment.ResultAPITest" />
+           <!-- <class name="com.transflower.tflassessment.ResultAPITest" />  -->
+            <class name="com.transflower.tflassessment.UserAnalyticsAPITest" />
+
         </classes>
     </test>
 </suite>

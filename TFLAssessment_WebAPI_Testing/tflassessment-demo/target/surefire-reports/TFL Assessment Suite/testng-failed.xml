@@ -3,11 +3,11 @@
 <suite name="Failed suite [TFL Assessment Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="API Tests(failed)" verbose="0">
     <classes>
-      <class name="com.transflower.tflassessment.ResultAPITest">
+      <class name="com.transflower.tflassessment.UserAnalyticsAPITest">
         <methods>
-          <include name="GetCandidateScore"/>
+          <include name="GetTotalOnlineSecondsAsync"/>
         </methods>
-      </class> <!-- com.transflower.tflassessment.ResultAPITest -->
+      </class> <!-- com.transflower.tflassessment.UserAnalyticsAPITest -->
     </classes>
   </test> <!-- API Tests(failed) -->
 </suite> <!-- Failed suite [TFL Assessment Suite] -->

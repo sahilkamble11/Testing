@@ -16,7 +16,7 @@ public class ResultAPITest {
     {
         given()
         .when()
-         .get("/api/Result/subjects ")
+        .get("/api/Result/subjects ")
         .then()
         .body("[0].id",equalTo(1))
         .body("[0].title",equalTo("COREJAVA"))
