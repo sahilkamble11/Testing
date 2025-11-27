@@ -66,4 +66,17 @@ public class ResultAPITest {
          .statusCode(200)  
          .body(equalTo("true"));
     }
+
+      @Test
+    public void GetCandidateResultDetails()
+    {
+        given()
+        .when()
+         .get("/api/Result/candidates/1/tests/1/details")
+        .then()
+         .statusCode(200)
+         .body("size()",greaterThan(0));
+    }
+
+
 }
