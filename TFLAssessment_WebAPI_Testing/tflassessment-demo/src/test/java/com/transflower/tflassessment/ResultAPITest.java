@@ -143,12 +143,23 @@ public class ResultAPITest {
     //      .body("size()",greaterThan(0));
     // }
 
+    // @Test
+    // public void GetSubjectResultDetails()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/results/subjectresults/3")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
+
     @Test
-    public void GetSubjectResultDetails()
+    public void GetTestAverageReport()
     {
         given()
         .when()
-         .get("/api/Result/results/subjectresults/3")
+         .get("/api/Result/results/testaveragereport/2")
         .then()
          .statusCode(200)
          .body("size()",greaterThan(0));
