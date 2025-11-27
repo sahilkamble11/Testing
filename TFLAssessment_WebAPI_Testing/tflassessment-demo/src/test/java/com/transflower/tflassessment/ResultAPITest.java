@@ -132,16 +132,28 @@ public class ResultAPITest {
     //      .body(equalTo("true"));
     // }
 
+    // @Test
+    // public void GetTestList()
+    // {
+    //     given()
+    //     .when()
+    //      .get("/api/Result/testlist/2")
+    //     .then()
+    //      .statusCode(200)
+    //      .body("size()",greaterThan(0));
+    // }
+
     @Test
-    public void GetTestList()
+    public void GetSubjectResultDetails()
     {
         given()
         .when()
-         .get("/api/Result/testlist/2")
+         .get("/api/Result/results/subjectresults/3")
         .then()
          .statusCode(200)
          .body("size()",greaterThan(0));
     }
+
 
 
 
