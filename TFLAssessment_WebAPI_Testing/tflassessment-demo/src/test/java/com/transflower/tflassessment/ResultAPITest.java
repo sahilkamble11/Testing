@@ -122,14 +122,25 @@ public class ResultAPITest {
     //      .body("size()",greaterThan(0));
     // }
 
-     @Test
-    public void SetPassingLevel(){
+    //  @Test
+    // public void SetPassingLevel(){
+    //     given()
+    //     .when()
+    //      .put("/api/Result/setpassinglevel/1/passingLevel/5")
+    //      .then()
+    //      .statusCode(200)  
+    //      .body(equalTo("true"));
+    // }
+
+    @Test
+    public void GetTestList()
+    {
         given()
         .when()
-         .put("/api/Result/setpassinglevel/1/passingLevel/5")
-         .then()
-         .statusCode(200)  
-         .body(equalTo("true"));
+         .get("/api/Result/testlist/2")
+        .then()
+         .statusCode(200)
+         .body("size()",greaterThan(0));
     }
 
 
