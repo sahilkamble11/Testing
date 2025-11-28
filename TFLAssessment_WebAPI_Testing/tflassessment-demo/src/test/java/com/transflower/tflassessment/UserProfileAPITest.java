@@ -27,30 +27,76 @@ public class UserProfileAPITest {
     //     .body("userRoles.size()", equalTo(0))
     //     .statusCode(200);
     // }
-     @Test
-    public void UpdateUserProfile(){
-        String requestBody="""
-                {
-                "id": 1,
-                "aadharId": "10564789",
-                "firstname": "sahil",
-                "lastname": "kamble",
-                "email": "sahil.kamble@example.com",
-                "contactNumber": "7972542628",
-                "password": "12345",
-                "userRoles": []
-                 }
-                """;
+//      @Test
+//     public void UpdateUserProfile(){
+//         String requestBody="""
+//                 {
+//                 "id": 1,
+//                 "aadharId": "10564789",
+//                 "firstname": "sahil",
+//                 "lastname": "kamble",
+//                 "email": "sahil.kamble@example.com",
+//                 "contactNumber": "7972542628",
+//                 "password": "12345",
+//                 "userRoles": []
+//                  }
+//                 """;
+//         given()
+//         .header("Content-Type","application/json")
+//         .body(requestBody)
+//         .when()
+//         .put("/api/UserProfile/2")
+//         .then()
+//         .statusCode(200)
+//         .body(equalTo("true"))
+//         ;
+// }
+
+// @Test
+//     public void GetUserRoleByContactNo(){
+//         given()
+//         .when()
+//         .get("/api/UserProfile/contactno/7972542628")
+//         .then()
+//         .body("id", equalTo(2))
+//         .body("aadharId", equalTo(null))
+//         .body("firstname", equalTo("sahil"))
+//         .body("lastname", equalTo("kamble"))
+//         .body("email", equalTo("kajal.ghule@example.com"))
+//         .body("contactNumber", equalTo("7972542628"))
+//         .body("roles.size()", equalTo(1))
+//         .body("roles[0].id", equalTo(1))
+//         .body("roles[0].name", equalTo("admin"))
+//         .body("roles[0].lob", equalTo(null))
+//         .statusCode(200);
+//     }
+
+    @Test
+    public void GetAllSmeDetails(){
         given()
-        .header("Content-Type","application/json")
-        .body(requestBody)
         .when()
-        .put("/api/UserProfile/2")
+        .get("/api/UserProfile/SmeUser")
         .then()
-        .statusCode(200)
-        .body(equalTo("true"))
-        ;
-}
+         .body("[0].id", equalTo(3))
+        .body("[0].userId", equalTo(3))
+        .body("[0].firstname", equalTo("nirjala"))
+        .body("[0].lastname", equalTo("naik"))
+        .body("[0].email", equalTo(null))
+        .body("[0].contactNumber", equalTo(null))
+        .body("[0].subjects.size()", equalTo(3))
+        .body("[0].subjects[0].id", equalTo(0))
+        .body("[0].subjects[0].title", equalTo("REACT"))
+        .body("[0].subjects[1].title", equalTo("MICROSERVICES"))
+        .body("[0].subjects[2].title", equalTo("CSHARP"))
+        .body("[1].id", equalTo(5))
+        .body("[1].userId", equalTo(5))
+        .body("[1].firstname", equalTo("sanika"))
+        .body("[1].lastname", equalTo("bhor"))
+        .body("[1].email", equalTo(null))
+        .body("[1].contactNumber", equalTo(null))
+        .body("[1].subjects.size()", equalTo(0))
+        .statusCode(200);
+    }
     
 
 }

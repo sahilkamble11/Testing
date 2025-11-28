@@ -72,9 +72,19 @@ public class ResultAPITest {
     @Test
     public void GetCandidateResultDetails()
     {
+
+        //read sample code from file
+
+        int candidateId=1;
+        int candidateTestId=1;
+
+        String apiurl="/api/Result/candidates/"+candidateId+"/tests/"+candidateTestId+"/details";
+
+        // object  expectedREsult=
+
         given()
         .when()
-         .get("/api/Result/candidates/1/tests/1/details")
+         .get(apiurl)
         .then()
         .body("candidateId",equalTo(1))
         .body("testId",equalTo(1))

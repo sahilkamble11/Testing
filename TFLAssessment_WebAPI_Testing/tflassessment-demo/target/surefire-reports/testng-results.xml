@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-28T17:42:33 IST" name="TFL Assessment Suite" finished-at="2025-11-28T17:42:35 IST" duration-ms="1847">
+  <suite started-at="2025-11-28T18:55:48 IST" name="TFL Assessment Suite" finished-at="2025-11-28T18:55:49 IST" duration-ms="1635">
     <groups>
     </groups>
-    <test started-at="2025-11-28T17:42:33 IST" name="API Tests" finished-at="2025-11-28T17:42:35 IST" duration-ms="1847">
+    <test started-at="2025-11-28T18:55:48 IST" name="API Tests" finished-at="2025-11-28T18:55:49 IST" duration-ms="1635">
       <class name="com.transflower.tflassessment.UserProfileAPITest">
-        <test-method signature="UpdateUserProfile()[pri:0, instance:com.transflower.tflassessment.UserProfileAPITest@5b367418]" started-at="2025-11-28T17:42:33 IST" name="UpdateUserProfile" finished-at="2025-11-28T17:42:35 IST" duration-ms="1792" status="PASS">
+        <test-method signature="GetAllSmeDetails()[pri:0, instance:com.transflower.tflassessment.UserProfileAPITest@5b367418]" started-at="2025-11-28T18:55:48 IST" name="GetAllSmeDetails" finished-at="2025-11-28T18:55:49 IST" duration-ms="1605" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UpdateUserProfile -->
+        </test-method> <!-- GetAllSmeDetails -->
       </class> <!-- com.transflower.tflassessment.UserProfileAPITest -->
     </test> <!-- API Tests -->
   </suite> <!-- TFL Assessment Suite -->
