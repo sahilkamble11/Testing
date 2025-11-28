@@ -68,14 +68,24 @@ public class UserAnalyticsAPITest {
     // }
 
     //working
-        @Test
-    public void GetAllUsers(){
+    //     @Test
+    // public void GetAllUsers(){
+    //     given()
+    //     .when()
+    //     .get("/api/UserAnalytics/alluser")
+    //     .then()
+    //     .body(equalTo("2"))
+    //     .statusCode(200);
+    // }
+
+    //working but time increases per second
+     @Test
+    public void GetAverageSessionDurationAsync(){
         given()
         .when()
-        .get("/api/UserAnalytics/alluser")
+        .get("/api/UserAnalytics/AverageActiveUserSeconds")
         .then()
-        .body(equalTo("2"))
+        .body(equalTo("00: 43: 06"))
         .statusCode(200);
-
-    }
+}
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="com.transflower.tflassessment.UserAnalyticsAPITest">
         <methods>
-          <include name="GetTotalOnlineSecondsAsync"/>
+          <include name="GetAverageSessionDurationAsync"/>
         </methods>
       </class> <!-- com.transflower.tflassessment.UserAnalyticsAPITest -->
     </classes>
