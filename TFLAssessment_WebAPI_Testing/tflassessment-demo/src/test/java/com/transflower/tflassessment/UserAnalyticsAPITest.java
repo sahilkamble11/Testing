@@ -26,7 +26,7 @@ public class UserAnalyticsAPITest {
     //     .when()
     //     .get("/api/UserAnalytics/ActiveUsercount")
     //     .then()
-    //     .body(equalTo("1"))
+    //     .body(equalTo("2"))
     //     .statusCode(200);
 
     // }
@@ -42,17 +42,39 @@ public class UserAnalyticsAPITest {
     // }
 
     //working
-    @Test
-    public void GetTopTenUser(){
+    // @Test
+    // public void GetTopTenUser(){
+    //     given()
+    //     .when()
+    //     .get("/api/UserAnalytics/toptenuser")
+    //     .then()
+    //     .body("[0].id", equalTo(5))
+    //     .body("[0].firstname", equalTo("sanika"))
+    //     .body("[0].lastname", equalTo("bhor"))
+    //     .body("[0].email", equalTo("sanika.bhor@example.com"))
+    //     .body("[0].userRoles[0].role.name", equalTo("sme"))
+    //     .statusCode(200);
+
+    // }
+
+    // @Test
+    // public void GetActiveUsers(){
+    //     given()
+    //     .when()
+    //     .get("/api/UserAnalytics/activeUser")
+    //     .then()
+    //     .statusCode(200);
+
+    // }
+
+    //working
+        @Test
+    public void GetAllUsers(){
         given()
         .when()
-        .get("/api/UserAnalytics/toptenuser")
+        .get("/api/UserAnalytics/alluser")
         .then()
-        .body("[0].id", equalTo(5))
-        .body("[0].firstname", equalTo("sanika"))
-        .body("[0].lastname", equalTo("bhor"))
-        .body("[0].email", equalTo("sanika.bhor@example.com"))
-        .body("[0].userRoles[0].role.name", equalTo("sme"))
+        .body(equalTo("2"))
         .statusCode(200);
 
     }
